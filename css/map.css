@@ -1,0 +1,288 @@
+/* Map.css - Styles for Australia Map Visualization */
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+    background-color: transparent;
+    min-height: calc(100vh - 150px);
+}
+
+.left-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #87CEEB;
+    padding: 20px 30px;
+    justify-content: flex-start;
+}
+
+.right-panel {
+    width: 420px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background-color: white;
+    padding: 20px 40px 20px 30px;
+    border-left: 1px solid #e0e0e0;
+}
+
+/* Map Container */
+#map-container {
+    width: 100%;
+    max-width: 750px;
+    height: 600px;
+    background-color: transparent;
+    margin: 0 auto;
+}
+
+/* Year Selector Styles */
+.year-selector-container {
+    text-align: left;
+    padding: 0 0 15px 0;
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+.year-selector-container label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+}
+
+.year-selector {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 8px 35px 8px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.year-selector:hover {
+    border-color: #999;
+    background-color: #fafafa;
+}
+
+.year-selector:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Map SVG Styles */
+#map-container svg {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/* State Path Styles */
+.state {
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.state:hover {
+    opacity: 0.7 !important;
+    filter: brightness(1.1);
+}
+
+/* State Label Styles */
+.state-label {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7),
+                 -1px -1px 2px rgba(0, 0, 0, 0.7),
+                 1px -1px 2px rgba(0, 0, 0, 0.7),
+                 -1px 1px 2px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Tooltip Styles */
+.map-tooltip {
+    position: absolute;
+    visibility: hidden;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    pointer-events: none;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 320px;
+    line-height: 1.6;
+}
+
+.map-tooltip strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.map-tooltip hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 8px 0;
+}
+
+/* Legend Styles */
+.legend {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.legend rect {
+    transition: transform 0.2s ease;
+}
+
+.legend-item:hover rect {
+    transform: scale(1.1);
+}
+
+.legend text {
+    font-size: 12px;
+    fill: #333;
+}
+
+/* Info Panel Styles */
+.info-panel {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 4px solid #4CAF50;
+}
+
+.info-panel h3 {
+    margin-top: 0;
+    color: #2e7d32;
+}
+
+.info-panel p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Legend Panel Styles */
+.legend-panel {
+    background-color: white;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.legend-panel h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 18px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.legend-color {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: 1px solid #333;
+}
+
+/* Pie Chart Container */
+#piechart-container {
+    background-color: white;
+    padding: 20px 0 0 0;
+    text-align: center;
+}
+
+#piechart-container h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #map-container svg {
+        width: 100%;
+        height: auto;
+    }
+    
+    .year-selector-container {
+        padding: 10px;
+    }
+    
+    .year-selector {
+        font-size: 14px;
+        padding: 6px 30px 6px 12px;
+    }
+    
+    .state-label {
+        font-size: 18px !important;
+    }
+    
+    .map-tooltip {
+        font-size: 11px;
+        max-width: 250px;
+        padding: 8px;
+    }
+    
+    .info-panel {
+        padding: 12px;
+    }
+    
+    .info-panel h3 {
+        font-size: 16px;
+    }
+    
+    .info-panel p,
+    .info-panel li {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .state-label {
+        font-size: 14px !important;
+    }
+    
+    .year-selector-container label {
+        display: block;
+        margin-bottom: 8px;
+    }
+}
+
+/* Animation for map loading */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#map-container {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Color transition for states */
+.state {
+    transition: fill 0.5s ease, opacity 0.3s ease;
+}
