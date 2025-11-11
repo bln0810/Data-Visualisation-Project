@@ -16,6 +16,16 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-title {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 18px 25px;
+    white-space: nowrap;
 }
 
 .navbar ul {
@@ -23,8 +33,9 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    flex: 1;
 }
 
 .navbar li {
@@ -74,4 +85,87 @@ footer {
     border-top: 1px solid #ddd;
     color: #999;
     font-size: 14px;
+}
+
+/* Home Page Specific Styles */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 56px);
+}
+
+.map-background {
+    flex: 1;
+    background-color: white;
+    background-image: url('../data/Australia Map.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 80px 20px;
+}
+
+.map-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.content-overlay h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+    margin: 0 0 15px 0;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.content-overlay .subtitle {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background-color: black;
+}
+
+.view-data-btn {
+    background-color: #d3d3d3;
+    color: #555;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    letter-spacing: 1px;
+}
+
+.view-data-btn:hover {
+    background-color: #bbb;
+}
+
+.presented-by {
+    color: white;
+    font-size: 14px;
+    text-align: right;
 }
