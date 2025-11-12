@@ -1,0 +1,203 @@
+"YEAR","JURISDICTION","AGE_GROUP","Sum(FINES)"
+2008,"ACT","All ages",2060
+2008,"NSW","All ages",40882
+2008,"NT","All ages",671
+2008,"QLD","All ages",28499
+2008,"SA","All ages",11411
+2008,"TAS","All ages",6780
+2008,"VIC","All ages",49739
+2008,"WA","All ages",15957
+2009,"ACT","All ages",1890
+2009,"NSW","All ages",41167
+2009,"NT","All ages",1106
+2009,"QLD","All ages",33352
+2009,"SA","All ages",14167
+2009,"TAS","All ages",5665
+2009,"VIC","All ages",53101
+2009,"WA","All ages",14804
+2010,"ACT","All ages",2407
+2010,"NSW","All ages",51104
+2010,"NT","All ages",998
+2010,"QLD","All ages",33013
+2010,"SA","All ages",14139
+2010,"TAS","All ages",3735
+2010,"VIC","All ages",54728
+2010,"WA","All ages",11705
+2011,"ACT","All ages",2284
+2011,"NSW","All ages",46714
+2011,"NT","All ages",729
+2011,"QLD","All ages",30389
+2011,"SA","All ages",13402
+2011,"TAS","All ages",3241
+2011,"VIC","All ages",52630
+2011,"WA","All ages",10485
+2012,"ACT","All ages",1722
+2012,"NSW","All ages",42900
+2012,"NT","All ages",722
+2012,"QLD","All ages",28548
+2012,"SA","All ages",11623
+2012,"TAS","All ages",2141
+2012,"VIC","All ages",61497
+2012,"WA","All ages",17822
+2013,"ACT","All ages",1356
+2013,"NSW","All ages",33514
+2013,"NT","All ages",1058
+2013,"QLD","All ages",27998
+2013,"SA","All ages",12560
+2013,"TAS","All ages",2914
+2013,"VIC","All ages",52452
+2013,"WA","All ages",14563
+2014,"ACT","All ages",1115
+2014,"NSW","All ages",34952
+2014,"NT","All ages",517
+2014,"QLD","All ages",25068
+2014,"SA","All ages",11886
+2014,"TAS","All ages",3256
+2014,"VIC","All ages",41448
+2014,"WA","All ages",14377
+2015,"ACT","All ages",873
+2015,"NSW","All ages",37989
+2015,"NT","All ages",492
+2015,"QLD","All ages",23048
+2015,"SA","All ages",12446
+2015,"TAS","All ages",3273
+2015,"VIC","All ages",33598
+2015,"WA","All ages",16666
+2016,"ACT","All ages",1120
+2016,"NSW","All ages",38918
+2016,"NT","All ages",535
+2016,"QLD","All ages",17213
+2016,"SA","All ages",11153
+2016,"TAS","All ages",3191
+2016,"VIC","All ages",27925
+2016,"WA","All ages",14926
+2017,"ACT","All ages",1299
+2017,"NSW","All ages",41020
+2017,"NT","All ages",546
+2017,"QLD","All ages",15043
+2017,"SA","All ages",11252
+2017,"TAS","All ages",2738
+2017,"VIC","All ages",29293
+2017,"WA","All ages",16718
+2018,"ACT","All ages",1399
+2018,"NSW","All ages",37653
+2018,"NT","All ages",861
+2018,"QLD","All ages",12828
+2018,"SA","All ages",8471
+2018,"TAS","All ages",2614
+2018,"VIC","All ages",32458
+2018,"WA","All ages",17697
+2019,"ACT","All ages",1098
+2019,"NSW","All ages",25463
+2019,"NT","All ages",760
+2019,"QLD","All ages",11580
+2019,"SA","All ages",7567
+2019,"TAS","All ages",2355
+2019,"VIC","All ages",36694
+2019,"WA","All ages",11850
+2020,"ACT","All ages",812
+2020,"NSW","All ages",151725
+2020,"NT","All ages",380
+2020,"QLD","All ages",4823
+2020,"SA","All ages",6325
+2020,"TAS","All ages",1966
+2020,"VIC","All ages",21231
+2020,"WA","All ages",7889
+2021,"ACT","All ages",544
+2021,"NSW","All ages",174082
+2021,"NT","All ages",309
+2021,"QLD","All ages",18547
+2021,"SA","All ages",4799
+2021,"TAS","All ages",2328
+2021,"VIC","All ages",15562
+2021,"WA","All ages",4909
+2022,"ACT","All ages",374
+2022,"NSW","All ages",207697
+2022,"NT","All ages",302
+2022,"QLD","All ages",121639
+2022,"SA","All ages",4583
+2022,"TAS","All ages",1973
+2022,"VIC","All ages",19428
+2022,"WA","All ages",6346
+2023,"ACT","0-16",10
+2023,"ACT","17-25",82
+2023,"ACT","26-39",110
+2023,"ACT","40-64",79
+2023,"ACT","65 and over",7
+2023,"NSW","0-16",18
+2023,"NSW","17-25",4141
+2023,"NSW","26-39",5055
+2023,"NSW","40-64",3692
+2023,"NSW","65 and over",379
+2023,"NSW","Unknown",202757
+2023,"NT","17-25",41
+2023,"NT","26-39",90
+2023,"NT","40-64",64
+2023,"NT","65 and over",10
+2023,"QLD","Unknown",80292
+2023,"SA","0-16",3
+2023,"SA","17-25",1387
+2023,"SA","26-39",2272
+2023,"SA","40-64",1805
+2023,"SA","65 and over",302
+2023,"SA","Unknown",0
+2023,"TAS","0-16",0
+2023,"TAS","17-25",440
+2023,"TAS","26-39",1017
+2023,"TAS","40-64",837
+2023,"TAS","65 and over",134
+2023,"VIC","0-16",6
+2023,"VIC","17-25",4440
+2023,"VIC","26-39",13162
+2023,"VIC","40-64",12162
+2023,"VIC","65 and over",1572
+2023,"VIC","Unknown",18204
+2023,"WA","0-16",0
+2023,"WA","17-25",706
+2023,"WA","26-39",1512
+2023,"WA","40-64",1227
+2023,"WA","65 and over",147
+2024,"ACT","0-16",7
+2024,"ACT","17-25",3655
+2024,"ACT","26-39",10863
+2024,"ACT","40-64",10587
+2024,"ACT","65 and over",1239
+2024,"ACT","Unknown",774
+2024,"NSW","0-16",22
+2024,"NSW","17-25",5327
+2024,"NSW","26-39",5303
+2024,"NSW","40-64",3652
+2024,"NSW","65 and over",421
+2024,"NSW","Unknown",147272
+2024,"NT","0-16",1
+2024,"NT","17-25",45
+2024,"NT","26-39",112
+2024,"NT","40-64",78
+2024,"NT","65 and over",8
+2024,"QLD","0-16",2104
+2024,"QLD","17-25",10451
+2024,"QLD","26-39",29198
+2024,"QLD","40-64",29490
+2024,"QLD","65 and over",3789
+2024,"QLD","Unknown",302
+2024,"SA","0-16",2
+2024,"SA","17-25",1139
+2024,"SA","26-39",1778
+2024,"SA","40-64",1483
+2024,"SA","65 and over",199
+2024,"SA","Unknown",4
+2024,"TAS","17-25",493
+2024,"TAS","26-39",1120
+2024,"TAS","40-64",1025
+2024,"TAS","65 and over",177
+2024,"VIC","0-16",7
+2024,"VIC","17-25",4692
+2024,"VIC","26-39",17100
+2024,"VIC","40-64",19129
+2024,"VIC","65 and over",2968
+2024,"VIC","Unknown",11179
+2024,"WA","0-16",1
+2024,"WA","17-25",804
+2024,"WA","26-39",1655
+2024,"WA","40-64",1138
+2024,"WA","65 and over",133
