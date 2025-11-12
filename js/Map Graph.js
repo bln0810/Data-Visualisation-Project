@@ -9,7 +9,6 @@ class AustraliaMapChart {
         this.height = 700 - this.margin.top - this.margin.bottom;
         this.currentYear = 2024;
         this.finesData = [];
-        this.drugTestsData = [];
         
         // State abbreviations mapping
         this.stateNames = {
@@ -50,18 +49,11 @@ class AustraliaMapChart {
 
     async loadData() {
         try {
-            // Load both CSV files
-            const [fines, drugTests] = await Promise.all([
-                d3.csv('../data/police_enforcement_2024_fines-1.csv'),
-                d3.csv('../data/police_enforcement_2024_positive_drug_tests-1.csv')
-            ]);
-            
-            this.finesData = fines;
-            this.drugTestsData = drugTests;
+            // Load only fines CSV file
+            this.finesData = await d3.csv('../data/police_enforcement_2024_fines-1.csv');
             
             console.log('Data loaded successfully');
             console.log('Fines records:', this.finesData.length);
-            console.log('Drug tests records:', this.drugTestsData.length);
             
         } catch (error) {
             console.error('Error loading data:', error);
@@ -280,14 +272,6 @@ class AustraliaMapChart {
         const totalCharges = d3.sum(finesFiltered, d => +d.CHARGES || 0);
         const totalArrests = d3.sum(finesFiltered, d => +d.ARRESTS || 0);
 
-        // Calculate drug tests statistics
-        const drugTestsFiltered = this.drugTestsData.filter(d => 
-            d.JURISDICTION === jurisdiction && 
-            d.YEAR == year
-        );
-
-        const totalDrugTests = d3.sum(drugTestsFiltered, d => +d.COUNT || 0);
-
         // Calculate fines by detection method type
         let cameraFines = 0;
         let policeFines = 0;
@@ -310,7 +294,6 @@ class AustraliaMapChart {
             totalFines,
             totalCharges,
             totalArrests,
-            totalDrugTests,
             cameraFines,
             policeFines
         };
@@ -350,7 +333,6 @@ class AustraliaMapChart {
                         <strong>Total Fines:</strong> ${stats.totalFines.toLocaleString()}<br/>
                         <strong>Total Charges:</strong> ${stats.totalCharges.toLocaleString()}<br/>
                         <strong>Total Arrests:</strong> ${stats.totalArrests.toLocaleString()}<br/>
-                        <strong>Drug Tests:</strong> ${stats.totalDrugTests.toLocaleString()}<br/>
                         <hr style="margin: 5px 0;">
                         <strong>Fines Type:</strong><br/>
                         • Camera: ${stats.cameraFines.toLocaleString()}<br/>
