@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurisdiction Fines Mapping</title>
+    
+    <!-- D3.js Library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/Chart.css">
+    <link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+   <nav class="navbar">
+        <div class="navbar-title">COS30045 Data Visualisation Project</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="map.html" class="active">Jurisdiction Fines Mapping</a></li>
+            <li><a href="age.html">Fines by Age Group and Jurisdiction</a></li>
+            <li><a href="camera_detection.html">Impact of Camera-Based Detection on Enforcement Levels</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-section">
+        <h1>🚔 Jurisdiction Fines Mapping</h1>
+        <p class="subtitle">Interactive map showing mobile phone use fines distribution across Australian states and territories</p>
+    </div>
+    
+    <div class="main-content">
+        <div class="left-panel">
+            <div class="year-selector-container">
+                <label for="year-select" style="font-weight: bold; margin-right: 10px;">Year:</label>
+                <select id="year-select" class="year-selector"></select>
+            </div>
+            <div id="map-container"></div>
+        </div>
+        
+        <div class="right-panel">
+            <div class="legend-panel">
+                <h3>Fine Levels</h3>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: rgb(137, 235, 137);"></div>
+                    <span>50,000</span>
+                </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: rgb(226, 62, 62);"></div>
+                        <span>50,000 - 100,000</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: black;"></div>
+                        <span>> 100,000</span>
+                    </div>
+                    <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+                    <div style="text-align: center;">
+                        <h4 style="margin: 10px 0; color: #333;">Total Yearly Fines:</h4>
+                        <div id="total-fines" style="font-size: 32px; font-weight: bold; color: #333;">0</div>
+                    </div>
+                </div>
+                
+                <div id="piechart-container">
+                    <h3>Fines Type</h3>
+                    <div id="piechart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript Files -->
+    <script src="js/Map Graph.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
