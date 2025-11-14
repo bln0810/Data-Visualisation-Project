@@ -199,6 +199,21 @@ class Q5Charts {
             .attr('stroke-width', 3)
             .attr('fill', 'none');
         
+        // Add total fines line (starting from 2019 to show transition)
+        const totalFinesData = this.yearlyData.filter(d => d.year >= 2019);
+        
+        const totalLine = d3.line()
+            .x(d => xScale(d.year))
+            .y(d => yScale(d.total));
+        
+        svg.append('path')
+            .datum(totalFinesData)
+            .attr('class', 'line')
+            .attr('d', totalLine)
+            .attr('stroke', '#90EE90')
+            .attr('stroke-width', 3)
+            .attr('fill', 'none');
+        
         // Add camera data points
         svg.selectAll('.line-point-camera')
             .data(this.yearlyData)
@@ -234,6 +249,29 @@ class Q5Charts {
             .on('mouseover', (event, d) => {
                 const percentage = ((d.police / d.total) * 100).toFixed(1);
                 this.showTooltip(event, `${d.year}\nPolice-issued: ${d.police.toLocaleString()}\n(${percentage}% of total)`);
+            })
+            .on('mouseout', () => {
+                this.hideTooltip();
+            });
+        
+        // Add total fines data points
+        svg.selectAll('.line-point-total')
+            .data(totalFinesData)
+            .enter()
+            .append('circle')
+            .attr('class', 'line-point-total')
+            .attr('cx', d => xScale(d.year))
+            .attr('cy', d => yScale(d.total))
+            .attr('r', 5)
+            .attr('fill', '#90EE90')
+            .attr('stroke', '#fff')
+            .attr('stroke-width', 2)
+            .on('mouseover', (event, d) => {
+                if (d.year === 2019) {
+                    this.showTooltip(event, `${d.year}\nPolice-issued: ${d.police.toLocaleString()}`);
+                } else {
+                    this.showTooltip(event, `${d.year}\nTotal Fines: ${d.total.toLocaleString()}`);
+                }
             })
             .on('mouseout', () => {
                 this.hideTooltip();
@@ -284,7 +322,8 @@ class Q5Charts {
         
         const legendData = [
             { label: 'Camera-Based Detection', color: '#E74C3C' },
-            { label: 'Police-Issued Fines', color: '#3498db' }
+            { label: 'Police-Issued Fines', color: '#3498db' },
+            { label: 'Total Fines Level', color: '#90EE90' }
         ];
         
         legendData.forEach((d, i) => {
