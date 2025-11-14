@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Group 27</title>
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .about-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .about-header h1 {
+            color: #2c3e50;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .about-header .group-number {
+            color: #3498db;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .about-header p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .member-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #e0e0e0;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .member-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 3px solid #3498db;
+        }
+
+        .member-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .member-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .member-id {
+            font-size: 16px;
+            color: #7f8c8d;
+            font-family: 'Courier New', monospace;
+            background-color: #ecf0f1;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .project-info {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+        }
+
+        .project-info h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .project-info p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .project-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .project-info li {
+            padding: 8px 0;
+            color: #555;
+        }
+
+        .project-info li:before {
+            content: "✓ ";
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-title">COS30045 Data Visualisation Project</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="comparison.html">Fine Types Comparison</a></li>
+            <li><a href="map.html">Jurisdiction Fines Mapping</a></li>
+            <li><a href="age.html">Fines by Age Group and Jurisdiction</a></li>
+            <li><a href="camera_detection.html">Impact of Camera-Based Detection on Enforcement Levels</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="about-container">
+        <div class="about-header">
+            <h1>About Us</h1>
+            <div class="group-number">Group 27</div>
+            <p>
+                We are a team of three students from Swinburne University of Technology Sarawak Campus, 
+                working together on the COS30045 Data Visualisation project for Semester 2, 2025. 
+                Our project focuses on analyzing and visualizing mobile phone use enforcement data 
+                across Australian jurisdictions using interactive D3.js visualizations.
+            </p>
+        </div>
+
+        <div class="team-members">
+            <div class="member-card">
+                <div class="member-icon">
+                    <img src="data/member1.jpeg" alt="Zi Zheng JONG">
+                </div>
+                <div class="member-name">Zi Zheng JONG</div>
+                <div class="member-id">Student ID: 104388603</div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-icon">
+                    <img src="data/member2.jpg" alt="Wee Yang Lim">
+                </div>
+                <div class="member-name">Wee Yang Lim</div>
+                <div class="member-id">Student ID: XXXXXXXX</div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-icon">
+                    <img src="data/member3.jpg" alt="Victor Kai Wen Chan">
+                </div>
+                <div class="member-name">Victor Kai Wen Chan</div>
+                <div class="member-id">Student ID: XXXXXXXX</div>
+            </div>
+        </div>
+
+        <div class="project-info">
+            <h2>📊 Project Overview</h2>
+            <p>
+                <strong>Course:</strong> COS30045 - Data Visualisation<br>
+                <strong>Semester:</strong> Semester 2, 2025<br>
+                <strong>Institution:</strong> Swinburne University of Technology Sarawak<br>
+                <strong>Group Number:</strong> 27
+            </p>
+            
+            <h2 style="margin-top: 30px;">🎯 Project Features</h2>
+            <ul>
+                <li>Interactive Australian map showing jurisdiction-based mobile phone fines</li>
+                <li>Comparison analysis of fine types across different offense categories</li>
+                <li>Age group and jurisdiction-based fine analysis</li>
+                <li>Impact assessment of camera-based detection on enforcement levels</li>
+                <li>Dynamic visualizations using D3.js library</li>
+            </ul>
+
+            <h2 style="margin-top: 30px;">📈 Data Source</h2>
+            <p>
+                This project utilizes data from the Bureau of Infrastructure and Transport Research Economics (BITRE) 
+                - Road Safety Enforcement Data 2024, focusing on mobile phone use violations across Australian states and territories.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sem 2 Group 27 COS30045 Data Visualisation Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>
