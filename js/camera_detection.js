@@ -6,8 +6,8 @@ class Q5Charts {
         
         // Period definitions: Before and after camera-based detection introduction
         this.periods = {
-            'Before Camera Detection (2008-2019)': { years: [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019], color: '#95a5a6' },
-            'After Camera Detection Introduction (2020+)': { years: [2020, 2021, 2022, 2023, 2024], color: '#f39c12' }
+            'Before Camera Detection (2008-2019)': { years: [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018], color: '#95a5a6' },
+            'After Camera Detection Introduction (2020+)': { years: [2019, 2020, 2021, 2022, 2023, 2024], color: '#f39c12' }
         };
         
         this.init();

@@ -8,7 +8,6 @@ class Q4Charts {
         this.selectedJurisdictions = new Set();
         this.ageGroups = ['0-16', '17-25', '26-39', '40-64', '65 and over'];
         this.allJurisdictions = ['ACT', 'NSW', 'NT', 'QLD', 'SA', 'TAS', 'VIC', 'WA'];
-        
         // Initialize
         this.init();
     }
