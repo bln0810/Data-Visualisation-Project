@@ -1,0 +1,63 @@
+@ -0,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5 Analysis - Impact of Major Events on Enforcement</title>
+    
+    <!-- D3.js Library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/Q5.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-title">COS30045 Data Visualisation Project</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="map.html">Jurisdiction Fines Mapping</a></li>
+            <li><a href="age.html">Fines by Age Group and Jurisdiction</a></li>
+            <li><a href="camera_detection.html" class="active">Impact of Camera-Based Detection on Enforcement Levels</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-section">
+        <h1>Impact of Camera-Based Detection on Enforcement Levels</h1>
+        <p class="subtitle">What is the impact of camera-based detection compared to police-issued fines on overall enforcement levels?</p>
+        <div class="data-note">
+            <strong>📌 Note:</strong> 
+            This analysis examines how the adoption of automated detection technologies (camera-based fines) has influenced enforcement outcomes. 
+            The data compares two enforcement methods:
+            <span style="color: #E74C3C;"><strong>Camera-based Detection</strong></span> (automated) and 
+            <span style="color: #3498db;"><strong>Police-issued Fines</strong></span> (manual).
+            Camera-based detection was introduced in 2020, which explains the significant increase in enforcement activity from that year onwards.
+        </div>
+    </div>
+
+    <div class="charts-container">
+        <div class="chart-wrapper">
+            <h2 class="chart-title">Year-by-Year Enforcement Trends: Camera-Based vs Police-Issued Fines</h2>
+            <div id="timeline-chart" class="chart-container"></div>
+        </div>
+
+        <div class="insights-panel">
+            <h3>📈 Key Insights</h3>
+            <div id="insights-content">
+                <p>Loading analysis...</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 COS30045 Data Visualisation Project. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/Q5-Charts.js"></script>
+</body>
+</html>
