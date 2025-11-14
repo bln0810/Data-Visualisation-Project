@@ -1,0 +1,37 @@
+/* comparism.css - Styles for fine types comparison page */
+
+.chart-container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#comparison-chart {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar {
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.bar:hover {
+    opacity: 1 !important;
+}
+
+.bar-label {
+    font-weight: 500;
+}
+
+.tooltip {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
