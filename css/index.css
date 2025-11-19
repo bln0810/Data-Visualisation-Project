@@ -10,9 +10,9 @@ body {
 
 /* Navigation Bar Styles */
 .navbar {
-    background-color: #2c3e50;
+    background: linear-gradient(90deg, #2c3e50 0%, #34495e 100%);
     padding: 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -22,10 +22,11 @@ body {
 
 .navbar-title {
     color: white;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 18px 25px;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 20px 25px;
     white-space: nowrap;
+    letter-spacing: 0.5px;
 }
 
 .navbar ul {
@@ -46,17 +47,21 @@ body {
     display: block;
     color: white;
     text-decoration: none;
-    padding: 18px 25px;
-    transition: background-color 0.3s;
-    font-weight: 500;
+    padding: 20px 20px;
+    transition: all 0.3s;
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
 }
 
 .navbar a:hover {
-    background-color: #34495e;
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #3498db;
 }
 
 .navbar a.active {
-    background-color: #3498db;
+    color: #3498db;
+    border-bottom: 3px solid #3498db;
 }
 
 /* Header Section */
@@ -94,78 +99,270 @@ footer {
     min-height: calc(100vh - 56px);
 }
 
-.map-background {
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 100px 40px;
+    text-align: center;
     flex: 1;
-    background-color: white;
-    background-image: url('../data/Australia Map.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    padding: 80px 20px;
 }
 
-.map-background::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.5);
-    pointer-events: none;
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.content-overlay {
-    position: relative;
-    z-index: 1;
+.hero-section h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: white;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-description {
+    font-size: 18px;
+    margin: 0 0 40px 0;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.hero-btn.primary-btn {
+    background-color: #3498db;
+    color: white;
+    border: 2px solid #3498db;
+}
+
+.hero-btn.primary-btn:hover {
+    background-color: white;
+    color: #2c3e50;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.hero-btn.secondary-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.hero-btn.secondary-btn:hover {
+    background-color: white;
+    color: #2c3e50;
+    transform: translateY(-2px);
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 40px;
+    background-color: #f8f9fa;
+}
+
+.features-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #2c3e50;
+    margin: 0 0 60px 0;
+    font-weight: 700;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
     text-align: center;
 }
 
-.content-overlay h1 {
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
     font-size: 48px;
-    font-weight: bold;
-    color: #000;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
     margin: 0 0 15px 0;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
 
-.content-overlay .subtitle {
-    font-size: 24px;
-    color: #333;
-    margin: 0;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+.feature-card p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
 }
 
+.feature-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.feature-link:hover {
+    color: #764ba2;
+}
+
+/* Bottom Section */
 .bottom-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
-    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+}
+
+.bottom-section h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: white;
+}
+
+.bottom-section p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+}
+
+.course-info {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 10px 0 20px 0;
+}
+
+.data-source {
+    text-align: left;
+}
+
+.team-info {
+    text-align: right;
 }
 
 .view-data-btn {
-    background-color: #d3d3d3;
-    color: #555;
-    padding: 15px 40px;
+    background-color: white;
+    color: #2c3e50;
+    padding: 12px 30px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    display: inline-block;
+    letter-spacing: 0.5px;
 }
 
 .view-data-btn:hover {
-    background-color: #bbb;
+    background-color: #ecf0f1;
+    transform: translateY(-2px);
 }
 
-.presented-by {
+.about-link {
     color: white;
-    font-size: 14px;
-    text-align: right;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    display: inline-block;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 2px;
+}
+
+.about-link:hover {
+    border-bottom-color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero-section {
+        padding: 60px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-btn {
+        width: 100%;
+    }
+
+    .features-section {
+        padding: 60px 20px;
+    }
+
+    .features-section h2 {
+        font-size: 28px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .bottom-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .data-source,
+    .team-info {
+        text-align: center;
+    }
 }

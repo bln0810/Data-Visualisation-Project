@@ -159,9 +159,7 @@
 }
 
 .chart-container .grid-line {
-    stroke: #ddd;
-    stroke-dasharray: 2;
-    opacity: 0.5;
+    display: none;
 }
 
 /* Line Chart Specific */
