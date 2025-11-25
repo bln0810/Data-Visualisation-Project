@@ -104,7 +104,7 @@ class Q5Charts {
         container.innerHTML = '';
         
         // Set dimensions
-        const margin = { top: 40, right: 30, bottom: 60, left: 100 };
+        const margin = { top: 40, right: 30, bottom: 80, left: 100 };
         const width = container.clientWidth - margin.left - margin.right;
         const height = 450 - margin.top - margin.bottom;
         
@@ -314,33 +314,62 @@ class Q5Charts {
             .attr('font-weight', 'bold')
             .attr('font-size', '15px')
             .attr('fill', '#333')
-            .text('Impact of Camera-Based Detection on Enforcement Levels (2008-2024)');
         
-        // Add legend
-        const legendX = width - 220;
-        const legendY = 10;
-        
+        // Add legend centered at the bottom
         const legendData = [
             { label: 'Camera-Based Detection', color: '#E74C3C' },
             { label: 'Police-Issued Fines', color: '#3498db' },
             { label: 'Total Fines Level', color: '#90EE90' }
         ];
-        
+
+        const itemRectSize = 12;
+        const itemPadding = 8; 
+        const itemGap = 24; 
+
+        const measureGroup = svg.append('g')
+            .attr('class', 'legend-measure')
+            .attr('visibility', 'hidden');
+
+        const itemWidths = legendData.map(d => {
+            const t = measureGroup.append('text')
+                .attr('font-size', '12px')
+                .text(d.label);
+            const bbox = t.node().getBBox();
+            const w = bbox.width + itemRectSize + itemPadding; 
+            t.remove();
+            return w;
+        });
+
+        measureGroup.remove();
+
+        const totalLegendWidth = itemWidths.reduce((s, v) => s + v, 0) + (legendData.length - 1) * itemGap;
+        let startX = (width - totalLegendWidth) / 2;
+        if (startX < 0) startX = 8; 
+
+        const legendYPos = height + 55;
+
+        const legendGroup = svg.append('g')
+            .attr('class', 'legend')
+            .attr('transform', `translate(${startX}, ${legendYPos})`);
+
+        let xOffset = 0;
         legendData.forEach((d, i) => {
-            svg.append('rect')
-                .attr('x', legendX)
-                .attr('y', legendY + i * 25)
-                .attr('width', 12)
-                .attr('height', 12)
+            legendGroup.append('rect')
+                .attr('x', xOffset)
+                .attr('y', 0)
+                .attr('width', itemRectSize)
+                .attr('height', itemRectSize)
                 .attr('fill', d.color)
                 .attr('rx', 2);
-            
-            svg.append('text')
-                .attr('x', legendX + 18)
-                .attr('y', legendY + i * 25 + 10)
+
+            legendGroup.append('text')
+                .attr('x', xOffset + itemRectSize + itemPadding)
+                .attr('y', itemRectSize)
                 .attr('font-size', '12px')
                 .attr('fill', '#333')
                 .text(d.label);
+
+            xOffset += itemWidths[i] + itemGap;
         });
     }
     
